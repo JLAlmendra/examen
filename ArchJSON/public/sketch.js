@@ -23,10 +23,11 @@ function setup() {
  //Tomar el valor del boton de post
   var POSTit = select('#BtnPost');
   POSTit.mousePressed(mandaPOST);
-
+ var txt = select('#cantidad');
    // analizar el post
   function mandaPOST() {
     var params = {
+      
       text: txt.value()
     }
     httpPost('/all', params, success);
